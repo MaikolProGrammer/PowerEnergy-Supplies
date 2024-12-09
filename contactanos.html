@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/contactanos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="keywords"
+      content="Paneles Solares, Electricidad, Diseños, Mantenimiento, Eficiencia Energetica "
+    />
+    <meta name="author" content="Power Energy & Supplies SAS" />
+    <meta
+      name="description"
+      content="Power Energy & Supplies S.A.S., es una empresa  creada en marzo 2019 en la ciudad de Bogotá Colombia, se encuentra situada en Bogotá D.C., dedicada a los  servicios de diseño y construcción de Instalaciones Eléctricas Residenciales, Industriales, Comerciales  y Hospitalarias. Está constituida como una Sociedad por Acciones Simplificada.
+    "
+    />
+    <title>Contactanos | Power Energy & Supplies</title>
+    <link
+      rel="shortcut icon"
+      href="./media/favicon_empresa.png"
+      object-fit:fill;
+    />
+  </head>
+  <body>
+    <header id="header">
+      <img src="./media/menu.svg" id="open" class="open" />
+
+      <div class="logo-cont_header">
+        <img src="./media/logo.png" alt="Power Energy & Supplies Logo" />
+      </div>
+
+      <nav class="nav-cont_header" id="nav-cont_header">
+        <img src="./media/close.svg" id="close" class="close" />
+        <ul>
+          <li class="nav-item-1_header"><a href="./index.html#inicio">Inicio</a></li>
+          <li class="nav-item-2_header"><a href="./index.html#productos">Productos</a></li>
+          <li class="nav-item-3_header"><a href="./index.html#nosotros">Nosotros</a></li>
+        </ul>
+      </nav>
+
+      <button
+        id="button"
+        type="button"
+        onclick="location.href='contactanos.html'"
+      >
+        Contactanos 😋
+      </button>
+    </header>
+
+    <form
+      method="POST"
+      action="./scripts/process_form.php"
+      class="contactanos"
+      id="formulario-de-contacto"
+    >
+      <h2 data-section="Form_contact_us" data-value="title">
+        Contactanos y recibiras una cotización de tu proyecto
+      </h2>
+      <div class="form_contactanos">
+        <label for="nombre" class="nombre_campo nombre">
+          <input
+            type="text"
+            minlength="3"
+            required
+            placeholder="Maikol"
+            id="nombre"
+          />
+          <h5 data-section="Form_contact_us" data-value="name">Nombre</h5>
+        </label>
+        <label for="Apellido" class="apellido_campo nombre">
+          <input
+            type="text"
+            minlength="4"
+            required
+            placeholder="Ovalle"
+            id="Apellido"
+          />
+          <h5 data-section="Form_contact_us" data-value="last_name">
+            Apellido
+          </h5>
+        </label>
+        <label for="correo" class="datos">
+          <input
+            type="text"
+            minlength="10"
+            required
+            placeholder="proyectospes01@gmail.com"
+            id="correo"
+          />
+          <h5 data-section="Form_contact_us" data-value="e-mail">
+            Correo Electronico
+          </h5>
+        </label>
+        <label for="telefono" class="datos">
+          <select name="prefijo" id="prefijo">
+            <option value="+57">+57</option>
+            <option value="+58">+58</option>
+            <option value="+53">+53</option>
+            <option value="+54">+54</option>
+            <option value="+55">+55</option>
+            <option value="+56">+56</option>
+            <option value="+86">+86</option>
+            <option value="+506">+506</option>
+            <option value="+593">+593</option>
+            <option value="+1">+1</option>
+          </select>
+
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            placeholder="312 123 45 31"
+            required
+            item
+            id="telefono"
+          />
+
+          <h5 data-section="Form_contact_us" data-value="phone">Telefono</h5>
+        </label>
+
+        <label for="selectable" required class="Seleccionable">
+          <h6 data-section="Form_contact_us" data-value="how_can">
+            ¿En que podemos ayudarte?
+          </h6>
+          <input type="text" id="descripcion" name="descripcion" placeholder="Describenos tu inquietud" required>
+
+        </label>
+
+        <button type="submit" data-section="Form_contact_us" data-value="send">
+          Enviar ↗️
+        </button>
+      </div>
+    </form>
+
+    <!-- 
+    footer -->
+
+    <footer>
+      <div class="container__footer">
+        <div class="acerca">
+          <h3>Power Energy & Supplies</h3>
+          <h4>Phone: +57 312 460 0196</h4>
+          <h4>
+            E-Mail:
+            <a href="mailto:proyectospes01@gmail.com"
+              >proyectospes01@gmail.com</a
+            >
+          </h4>
+        </div>
+        <div class="media">
+          <img
+            src="./media/whatsapp_icon.svg"
+            id="whatsapp"
+            onclick="window.open('https://api.whatsapp.com/send?phone=+573124600196&text=Hola,%20quiero%20contactarme%20con%20Power%20Energy%20and%20Supplies')"
+          />
+          <img
+            src="media/GitHub_icon.svg"
+            id="github"
+            onclick="window.open('https://github.com/PowerEnergySupplies')"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

@@ -29,23 +29,28 @@
   </head>
   <body>
     <header id="header">
-      <img src="./media/menu.svg"  id="open" class="open" />
+      <img src="./media/menu.svg" id="open" class="open" />
 
       <div class="logo-cont_header">
         <img src="./media/logo.png" alt="Power Energy & Supplies Logo" />
       </div>
 
       <nav class="nav-cont_header" id="nav-cont_header">
-        
-      <img src="./media/close.svg" id="close" class="close" />
+        <img src="./media/close.svg" id="close" class="close" />
         <ul>
-          <li class="nav-item-1_header"><a href="#">Inicio</a></li>
-          <li class="nav-item-2_header"><a href="#">Productos</a></li>
-          <li class="nav-item-3_header"><a href="#">Nosotros</a></li>
+          <li class="nav-item-1_header"><a href="#main">Inicio</a></li>
+          <li class="nav-item-2_header"><a href="#productos">Productos</a></li>
+          <li class="nav-item-3_header"><a href="#Nosotros">Nosotros</a></li>
         </ul>
       </nav>
 
-      <button id="button" type="button">Contactanos 😋</button>
+      <button
+        id="button"
+        type="button"
+        onclick="location.href='contactanos.html'"
+      >
+        Contactanos 😋
+      </button>
     </header>
 
     <main id="main">
@@ -66,7 +71,7 @@
       <h2><span>Nuestros Productos ⚡</span></h2>
 
       <div class="cont_productos">
-        <div class="category-1">
+        <div class="category-1" id="category-1">
           <h3>Paneles Solares ☀️</h3>
         </div>
         <div class="category-2">
@@ -84,6 +89,60 @@
         d="M0,160 C480,60 960,260 1440,160 L1440,0 L0,0 Z"
       ></path>
     </svg>
+
+    <section class="modal-container" id="modal-container">
+      <div class="modal">
+        <img src="./media/close.svg" id="cerrar_modal" alt="Cerrar" />
+
+        <h1>Calculemos tu proyecto energetico</h1>
+
+        <div class="tipo_modal" id="tipo_modal">
+          <p>Selecciona los elementos que tienes en tu casa y/o finca</p>
+
+          <div class="seleccionables_tipo_modal" id="tipo">
+            <div class="Bombilla_container">
+              <img src="./media/bombilla.svg" alt="Bombilla" id="Bombilla" />
+              <input type="number" id="Bombilla_container-input" />
+            </div>
+            <div class="TV_container">
+              <img src="./media/tv.svg" alt="Televisor" id="TV" />
+              <input type="number" id="TV_container-input" />
+            </div>
+            <div class="WM_container">
+              <img src="./media/lavadora.svg" alt="Lavadora" id="Lavadora" />
+              <input type="number" id="Lavadora_container-input" />
+            </div>
+            <div class="Nevera_container">
+              <img src="./media/nevera.svg" alt="Nevera" id="Nevera" />
+              <input type="number" id="Nevera_container-input" />
+            </div>
+            <div class="Licuadora_container">
+              <img src="./media/licuadora.svg" alt="Licuadora" id="Licuadora" />
+              <input type="number" id="Licuadora_container-input" />
+            </div>
+
+            <button id="calcular">Calcular!</button>
+          </div>
+        </div>
+
+        <div class="calculado" id="calculado">
+          <p>Su proyecto requerira:</p>
+
+          <div class="calculado_info">
+            <div class="paneles_calculado">
+              <img src="./media/panel.svg" alt="Panel Solar" />
+              <p id="cantidad_paneles_solares"> paneles solares</p>
+            </div>
+  
+            <div class="bateria_calculado">
+              <img src="./media/bateria.svg" alt="Baterias">
+              <p> <span id="potencia_bateria">45</span>  </p>
+            </div>
+          </div>
+          <button id="cotizemos">Cotizemos🤗!</button>
+        </div>
+      </div>
+    </section>
 
     <section id="Nosotros">
       <div class="cont_nosotros flex">
@@ -133,6 +192,5 @@
     </footer>
 
     <script src="./scripts/script.js"></script>
-
-      </body>
+  </body>
 </html>

@@ -1,8 +1,14 @@
+window.addEventListener("load", function () {
+  const contenedor_loader = this.document.querySelector(".contenedor_loader");
+  contenedor_loader.style.opacity = 0;
+  contenedor_loader.style.visibility = "hidden";
+  contenedor_loader.style.display = "none"
+});
+
 var nav_container = document.getElementById("nav-cont_header");
 var open_menu = document.getElementById("open");
 var close = document.getElementById("close");
 var button = document.getElementById("button");
-
 
 open_menu.addEventListener("click", function () {
   if (window.innerWidth <= "980") {

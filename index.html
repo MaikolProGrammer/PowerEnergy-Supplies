@@ -4,12 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
+    <base href="/" />
     <meta
       name="keywords"
       content="Paneles Solares, Electricidad, Diseños, Mantenimiento, Eficiencia Energetica "
@@ -28,6 +23,9 @@
     />
   </head>
   <body>
+    <div class="contenedor_loader">
+      <div class="loader"></div>
+    </div>
     <header id="header">
       <img src="./media/menu.svg" id="open" class="open" />
 
@@ -70,11 +68,14 @@
     <section id="productos">
       <h2><span>Nuestros Productos ⚡</span></h2>
 
-      <div class="cont_productos">
+      <div class="cont_productos" id="cont_productos">
         <div class="category-1" id="category-1">
           <h3>Paneles Solares ☀️</h3>
         </div>
-        <div class="category-2">
+        <div
+          class="category-2"
+          onclick="window.location.assign('./Contactanos.html')"
+        >
           <h3>Analisis De Calidad De Energia 🛠️</h3>
         </div>
 
@@ -131,15 +132,43 @@
           <div class="calculado_info">
             <div class="paneles_calculado">
               <img src="./media/panel.svg" alt="Panel Solar" />
-              <p id="cantidad_paneles_solares"> paneles solares</p>
+              <p id="cantidad_paneles_solares">paneles solares</p>
             </div>
-  
+
             <div class="bateria_calculado">
-              <img src="./media/bateria.svg" alt="Baterias">
-              <p> <span id="potencia_bateria">45</span>  </p>
+              <img src="./media/bateria.svg" alt="Baterias" />
+              <p><span id="potencia_bateria">45</span></p>
             </div>
           </div>
           <button id="cotizemos">Cotizemos🤗!</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="modal-container_productos" id="modal-container_productos">
+      <div class="modal_productos">
+        <img src="./media/close.svg" id="cerrar_modal_productos" alt="Cerrar" />
+
+        <div class="galeria_analisis" id="galeria_analisis">
+          <div class="producto1">
+            <img src="./media/Kioritsu_Insulation.jpg" alt="" />
+            <p>Kioritsu Insulation Tester</p>
+          </div>
+          <div class="producto2">
+            <img src="./media/Kioritsu_light-meter.jpg" alt="" />
+            <p>Digital Light Meter</p>
+          </div>
+          <div class="producto3">
+            <img src="./media/NN.jpg" alt="" />
+            <p>NO SE JAJAJA</p>
+          </div>
+
+          <div class="producto4">
+            <img src="./media/UNI-T UT200.jpg" alt="" />
+            <p>UNI-T UT200</p>
+          </div>
+          <div class="producto5"><img src="./media/UNI-T.jpg" alt="" /></div>
+          <div class="producto6"><img src="./media/UNI-T.jpg" alt="" /></div>
         </div>
       </div>
     </section>

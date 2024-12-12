@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/404.css" />
+
+    <meta
+      name="keywords"
+      content="Paneles Solares, Electricidad, Diseños, Mantenimiento, Eficiencia Energetica "
+    />
+    <meta name="author" content="Power Energy & Supplies SAS" />
+    <meta
+      name="description"
+      content="No hemos podido encontrar la pagina que estas buscnado :/.
+        "
+    />
+    <title>Error 404 | Power Energy & Supplies</title>
+    <link
+      rel="shortcut icon"
+      href="./media/favicon_empresa.png"
+      object-fit:fill;
+    />
+  </head>
+  <body>
+    <div class="contenedor_loader">
+      <div class="loader"></div>
+    </div>
+    <!--Creando el header-->
+    <header id="header">
+      <img src="./media/menu.svg" id="open" class="open" />
+
+      <div class="logo-cont_header">
+        <img src="./media/logo.png" alt="Power Energy & Supplies Logo" />
+      </div>
+
+      <nav class="nav-cont_header" id="nav-cont_header">
+        <img src="./media/close.svg" id="close" class="close" />
+        <ul>
+          <li class="nav-item-1_header"><a href="./index.html">Inicio</a></li>
+          <li class="nav-item-2_header">
+            <a href="./index.html#productos">Productos</a>
+          </li>
+          <li class="nav-item-3_header">
+            <a href="./index.html#nosotros">Nosotros</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button
+        id="button"
+        type="button"
+        onclick="location.href='contactanos.html'"
+      >
+        Contactanos 😋
+      </button>
+    </header>
+
+    <div class="c404">
+      <div class="container">
+        <h1>404</h1>
+        <h2>Opss¡ Pagina no disponible</h2>
+        <p>
+          No hemos encontrado la página de pediste, revisa la URL o visita
+          nuestra <a href="index.html">Home</a>
+        </p>
+        <img src="./media/404_enchufe.png" alt="Enchufe " />
+      </div>
+    </div>
+
+    <footer>
+      <div class="container__footer">
+        <div class="acerca">
+          <h3>Power Energy & Supplies</h3>
+          <h4>Phone: +57 312 460 0196</h4>
+          <h4>
+            E-Mail:
+            <a href="mailto:proyectospes01@gmail.com"
+              >proyectospes01@gmail.com</a
+            >
+          </h4>
+        </div>
+        <div class="media">
+          <img
+            src="./media/whatsapp_icon.svg"
+            id="whatsapp"
+            onclick="window.open('https://api.whatsapp.com/send?phone=+573124600196&text=Hola,%20quiero%20contactarme%20con%20Power%20Energy%20and%20Supplies')"
+          />
+          <img
+            src="media/GitHub_icon.svg"
+            id="github"
+            onclick="window.open('https://github.com/PowerEnergySupplies')"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      window.addEventListener("load", function () {
+        const contenedor_loader =
+          this.document.querySelector(".contenedor_loader");
+        contenedor_loader.style.opacity = 0;
+        contenedor_loader.style.visibility = "hidden";
+      });
+    </script>
+  </body>
+</html>

@@ -4,12 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/contactanos.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
+
     <meta
       name="keywords"
       content="Paneles Solares, Electricidad, Diseños, Mantenimiento, Eficiencia Energetica "
@@ -28,6 +23,9 @@
     />
   </head>
   <body>
+    <div class="contenedor_loader">
+      <div class="loader"></div>
+    </div>
     <header id="header">
       <img src="./media/menu.svg" id="open" class="open" />
 
@@ -38,9 +36,15 @@
       <nav class="nav-cont_header" id="nav-cont_header">
         <img src="./media/close.svg" id="close" class="close" />
         <ul>
-          <li class="nav-item-1_header"><a href="./index.html#inicio">Inicio</a></li>
-          <li class="nav-item-2_header"><a href="./index.html#productos">Productos</a></li>
-          <li class="nav-item-3_header"><a href="./index.html#nosotros">Nosotros</a></li>
+          <li class="nav-item-1_header">
+            <a href="./index.html#inicio">Inicio</a>
+          </li>
+          <li class="nav-item-2_header">
+            <a href="./index.html#productos">Productos</a>
+          </li>
+          <li class="nav-item-3_header">
+            <a href="./index.html#nosotros">Nosotros</a>
+          </li>
         </ul>
       </nav>
 
@@ -128,8 +132,13 @@
           <h6 data-section="Form_contact_us" data-value="how_can">
             ¿En que podemos ayudarte?
           </h6>
-          <input type="text" id="descripcion" name="descripcion" placeholder="Describenos tu inquietud" required>
-
+          <input
+            type="text"
+            id="descripcion"
+            name="descripcion"
+            placeholder="Describenos tu inquietud"
+            required
+          />
         </label>
 
         <button type="submit" data-section="Form_contact_us" data-value="send">

@@ -1,3 +1,13 @@
+window.addEventListener("load", () => {
+  const contenedor_loader = document.querySelector(".contenedor_loader");
+
+  Object.assign(contenedor_loader.style, {
+    opacity: "0",
+    visibility: "hidden",
+    display: "none",
+  });
+});
+
 // Declarando las variables de los inputs del modal
 
 let Bombilla = document.getElementById("Bombilla_container-input");
@@ -11,17 +21,29 @@ let calculado = document.getElementById("calculado");
 let inputs = [Bombilla, Televisor, Lavadora, Nevera, Licuadora];
 
 // Variables del menu
-var nav_container = document.getElementById("nav-cont_header");
-var open_menu = document.getElementById("open");
-var close = document.getElementById("close");
-var button = document.getElementById("button");
+const nav_container = document.getElementById("nav-cont_header");
+const open_menu = document.getElementById("open");
+const close = document.getElementById("close");
+const button = document.getElementById("button");
 
 // Variables para el modal del panel
-var panel = document.getElementById("category-1");
-var modal = document.getElementById("modal-container");
-var cerrar_modal = document.getElementById("cerrar_modal");
+const panel = document.getElementById("category-1");
+const modal = document.getElementById("modal-container");
+const cerrar_modal = document.getElementById("cerrar_modal");
 
-panel.addEventListener("click", function () {
+let regresar = document.getElementById("regresar");
+let galeria = document.getElementById("modal-container_productos");
+let cont_productos = document.getElementById("cont_productos");
+
+regresar.addEventListener("click", () => {
+  Object.assign(galeria.style, {
+    display: "inline",
+    alignItems: "center",
+    bottom: "0",
+  });
+});
+
+panel.addEventListener("click", () => {
   modal.style.display = "flex";
 });
 
@@ -30,12 +52,14 @@ cerrar_modal.addEventListener("click", function () {
 
   calculado.style.display = "none";
   document.getElementById("tipo_modal").style.display = "block";
-  inputs[0].value = 0;
-  inputs[1].value = 0;
-  inputs[2].value = 0;
-  inputs[3].value = 0;
-  inputs[4].value = 0;
+  inputs.forEach((input) => (input.value = ""));
 });
+
+document.getElementById("cerrar_modal_productos").addEventListener('click',()=>{
+  Object.assign(galeria.style,{
+    display:"none"
+  })
+})
 
 boton_modal.addEventListener("click", function () {
   let cantidad_paneles_solares = document.getElementById(
@@ -75,9 +99,13 @@ boton_modal.addEventListener("click", function () {
 
   let cotizemos = document.getElementById("cotizemos");
 
-  cotizemos.addEventListener("click",function(){
-    window.location.assign("https://www.youtube.com");
-  })
+  cotizemos.addEventListener("click", function () {
+    window.location.assign(
+      `https://api.whatsapp.com/send?phone=573124600196&text=Hola%20Power%20Energy%20%26%20Supplies%2C%20me%20gustar%C3%ADa%20realizar%20un%20proyecto%20con%20*${Math.ceil(
+        input_valor / 550
+      )}%20paneles%20solares*%20y%20*${input_valor}%20kW%20de%20bater%C3%ADa*%20%E2%9A%A1`
+    );
+  });
 });
 
 // Funcionalidad responsive del menu

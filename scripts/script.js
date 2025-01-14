@@ -35,15 +35,15 @@ let regresar = document.getElementById("regresar");
 let galeria = document.getElementById("modal-container_productos");
 let cont_productos = document.getElementById("cont_productos");
 
-regresar.addEventListener("click", () => {
-  Object.assign(galeria.style, {
-    display: "inline",
-    alignItems: "center",
-    bottom: "0",
-  });
-});
+// regresar.addEventListener("click", () => {
+//   Object.assign(galeria.style, {
+//     display: "inline",
+//     alignItems: "center",
+//     bottom: "0",
+//   });
+// });
 
-panel.addEventListener("click", () => {
+panel.addEventListener("click", function () {
   modal.style.display = "flex";
 });
 
@@ -55,11 +55,13 @@ cerrar_modal.addEventListener("click", function () {
   inputs.forEach((input) => (input.value = ""));
 });
 
-document.getElementById("cerrar_modal_productos").addEventListener('click',()=>{
-  Object.assign(galeria.style,{
-    display:"none"
-  })
-})
+document
+  .getElementById("cerrar_modal_productos")
+  .addEventListener("click", () => {
+    Object.assign(galeria.style, {
+      display: "none",
+    });
+  });
 
 boton_modal.addEventListener("click", function () {
   let cantidad_paneles_solares = document.getElementById(

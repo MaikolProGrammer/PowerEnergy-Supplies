@@ -43,6 +43,17 @@ let cont_productos = document.getElementById("cont_productos");
 //   });
 // });
 
+
+// Funcionalidad del modal de la galeria
+const galery = document.getElementById("category-2");
+
+galery.addEventListener("click", () => {
+  Object.assign(galeria.style, {
+    display: "block",
+  });
+})
+
+
 panel.addEventListener("click", function () {
   modal.style.display = "flex";
 });

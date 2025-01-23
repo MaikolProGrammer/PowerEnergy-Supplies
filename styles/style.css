@@ -263,6 +263,7 @@ html::-webkit-scrollbar-thumb {
   width: 100vw;
   background-color: #464d77;
   padding: 0 40px 0 20px;
+  padding-bottom: 40px;
 }
 
 .cont_productos {
@@ -714,12 +715,94 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 190px;
 }
 
+
+
+/*Proyectos*/
+
+.Nuestros-Proyectos{
+  text-align: center;
+  background-color: var(--oxford-blue);
+  width: 100vw;
+}
+
+.Nuestros-Proyectos h2{
+  padding: 30px;
+  margin-bottom: 10px;
+  font-size: Poppins-bold;
+  font-size: 30px;
+  color: var(--white);
+}
+
+
+.carrusel-proyectos{
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  width: 100vw;
+  margin-bottom: 50px;
+}
+
+.carrusel-proyectos h2{
+  text-align: center;
+}
+  
+
+.carrusel-proyectos-contenedor{
+  display: flex;
+  height: 400px;
+  
+  animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 40s linear infinite;
+  width: calc(300px * 14);
+  gap: 10px;
+}
+
+
+.carussel-caja{
+  width: 300px;
+  height: 100%;
+}
+
+.carussel-caja img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+
+@keyframes scroll {
+  0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+  }
+  100% {
+      -webkit-transform: translateX(calc(-300px * 7));
+      transform: translateX(calc(-300px * 7));
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 
 Nosotros */
 
 #Nosotros {
   width: 100vw;
   height: 60vh;
+  position: relative;
+  top: -4px;
   display: flex;
   justify-content: space-between;
   background-color: var(--gray);

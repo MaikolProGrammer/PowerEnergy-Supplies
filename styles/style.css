@@ -20,8 +20,10 @@
   -webkit-text-size-adjust: 100%;
   list-style: none;
   text-decoration: none;
-  font-family: PT-Sans, "Times New Roman", Times, serif;
+  font-family: SF-Medium, "Times New Roman", Times, serif;
   box-shadow: none;
+  font-weight: 100;
+  font-stretch: expanded;
   scroll-behavior: smooth;
 }
 
